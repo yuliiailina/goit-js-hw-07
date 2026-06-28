@@ -7,17 +7,20 @@ function handlerSubmit(event) {
 
     const elements = event.target.elements;
 
-    if(!elements.email.value || !elements.password.value) {
+    const email = elements.email.value.trim();
+    const password = elements.password.value.trim();
+
+    if (!email || !password) {
         alert("All form fields must be filled in");
-        return
+        return;
     }
 
     const info = {
-        email: elements.email.value.trim(),
-        password: elements.password.value.trim()
-    }
+        email: email,
+        password: password
+    };
 
     console.log(info);
-    
+
     event.target.reset();
 }
