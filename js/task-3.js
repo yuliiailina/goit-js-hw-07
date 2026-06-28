@@ -5,10 +5,10 @@ userName.addEventListener("input", handlerInput);
 
 function handlerInput(event) {
     const trimmedUserName = event.target.value.trim();
+
     if (trimmedUserName === "") {
         output.textContent = "Anonymous";
     } else {
         output.textContent = trimmedUserName;
     }
-};
-
+}
